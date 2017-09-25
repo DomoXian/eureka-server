@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 PROJECT_NAME=eureka-server
-SPRING_PROFILES_ACTIVE=dev
 PROJECT_HOME=/home/admin/app/
 JAR_DIR=${PROJECT_HOME}target
-JAR_NAME=${PROJECT_NAME}.jar
+JAR_NAME=${JAR_NAME}.jar
 cd ${PROJECT_HOME}
 ls
 mvn clean install -Dmaven.test.skip&& mvn package -Dmaven.test.skip

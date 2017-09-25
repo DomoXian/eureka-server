@@ -3,12 +3,6 @@ spring:
     active: local
   application:
     name: eureka-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/LenoXian/config_repo
-          force-pull: true
 server:
   port: 8761
 eureka:
