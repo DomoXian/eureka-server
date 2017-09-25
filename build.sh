@@ -10,5 +10,5 @@ cd ${JAR_DIR}
 EUREKA_PID=`ps -ef | grep "eureka" | grep -v grep | awk '{print $2}'`
 echo "Eureka PID= $EUREKA_PID"
 #kill -9 MOYU_PID
-java -jar ${JAR_NAME} --spring.profiles.active=${SPRING_PROFILES_ACTIVE}
+java -jar ${JAR_NAME}
 echo "========Build successful======="
