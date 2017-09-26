@@ -1,20 +1,9 @@
+server:
+  port: 8761
 spring:
   profiles:
     active: local
   application:
     name: eureka-server
-server:
-  port: 8761
-eureka:
-  instance:
-    hostname: 106.14.144.168
-    prefer-ip-address: true
-    ip-address: 106.14.144.168
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-logging:
-  config: classpath:eureka-logback.xml
+
 
