@@ -6,19 +6,19 @@
               value="%date{yyyy-MM-dd HH:mm:ss} | %highlight(%-5level) | %boldYellow(%thread) | %boldGreen(%logger) | %msg | [%file:%line]%n "/>
 
     <springProfile name="local">
-        <property name="FILE_PATH" value="/Users/xianguo1/logs/eureka/local"/>
-        <property name="WARN_FILE_PATH" value="/Users/xianguo1/logs/eureka/local/warn"/>
-        <property name="ERROR_FILE_PATH" value="/Users/xianguo1/logs/eureka/local/error"/>
+        <property name="FILE_PATH" value="/Users/xianguo1/logs/eureka-server/local"/>
+        <property name="WARN_FILE_PATH" value="/Users/xianguo1/logs/eureka-server/local/warn"/>
+        <property name="ERROR_FILE_PATH" value="/Users/xianguo1/logs/eureka-server/local/error"/>
     </springProfile>
     <springProfile name="dev">
-        <property name="FILE_PATH" value="/home/admin/app/logs/eureka/dev"/>
-        <property name="WARN_FILE_PATH" value="/home/admin/app/logs/eureka/dev/warn"/>
-        <property name="ERROR_FILE_PATH" value="/home/admin/app/logs/eureka/dev/error"/>
+        <property name="FILE_PATH" value="/home/admin/app/logs/eureka-server/dev"/>
+        <property name="WARN_FILE_PATH" value="/home/admin/app/logs/eureka-server/dev/warn"/>
+        <property name="ERROR_FILE_PATH" value="/home/admin/app/logs/eureka-server/dev/error"/>
     </springProfile>
     <springProfile name="online">
-        <property name="FILE_PATH" value="/home/admin/app/logs/eureka/online"/>
-        <property name="WARN_FILE_PATH" value="/home/admin/app/logs/eureka/online/warn"/>
-        <property name="ERROR_FILE_PATH" value="/home/admin/app/logs/eureka/online/error"/>
+        <property name="FILE_PATH" value="/home/admin/app/logs/eureka-server/online"/>
+        <property name="WARN_FILE_PATH" value="/home/admin/app/logs/eureka-server/online/warn"/>
+        <property name="ERROR_FILE_PATH" value="/home/admin/app/logs/eureka-server/online/error"/>
     </springProfile>
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
@@ -33,7 +33,7 @@
             <file>${FILE_PATH}/jetty_stdout.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <!-- 文件名称 -->
-                <fileNamePattern>${FILE_PATH}/eureka.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+                <fileNamePattern>${FILE_PATH}/eureka-server-server.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
                 <!-- 文件最大保存历史数量 -->
                 <maxHistory>100000</maxHistory>
                 <!-- 日志文件rolling触发策略 -->
@@ -53,7 +53,7 @@
             <file>${ERROR_FILE_PATH}/error.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <!-- 文件名称 -->
-                <fileNamePattern>${ERROR_FILE_PATH}/error-eureka.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+                <fileNamePattern>${ERROR_FILE_PATH}/error-eureka-server.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
                 <!-- 文件最大保存历史数量 -->
                 <maxHistory>100000</maxHistory>
                 <!-- 日志文件rolling触发策略 -->
@@ -78,7 +78,7 @@
             <file>${WARN_FILE_PATH}/warn.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <!-- 文件名称 -->
-                <fileNamePattern>${WARN_FILE_PATH}/warn-eureka.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+                <fileNamePattern>${WARN_FILE_PATH}/warn-eureka-server.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
                 <!-- 文件最大保存历史数量 -->
                 <maxHistory>100000</maxHistory>
                 <!-- 日志文件rolling触发策略 -->
